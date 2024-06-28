@@ -27,7 +27,7 @@ const Hero = props => {
 
     if (!typed && window && document.getElementById('typed')) {
       loadExternalResource(
-        'https://cdn.jsdelivr.net/npm/typed.js@2.0.12',
+        'https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.min.js',
         'js'
       ).then(() => {
         if (window.Typed) {
@@ -92,6 +92,7 @@ const Hero = props => {
 
       <LazyImage
         id='header-cover'
+        alt={siteInfo?.title}
         src={siteInfo?.pageCover}
         className={`header-cover w-full h-screen object-cover object-center ${siteConfig('HEXO_HOME_NAV_BACKGROUND_IMG_FIXED', null, CONFIG) ? 'fixed' : ''}`}
       />
